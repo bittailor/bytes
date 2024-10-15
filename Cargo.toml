@@ -21,9 +21,11 @@ categories = ["network-programming", "data-structures"]
 [features]
 default = ["std"]
 std = []
+use-portable-atomic = ["portable-atomic"]
 
 [dependencies]
 serde = { version = "1.0.60", optional = true, default-features = false, features = ["alloc"] }
+portable-atomic = { version = "1.9", optional = true, features = ["critical-section"] }
 
 [dev-dependencies]
 serde_test = "1.0"
